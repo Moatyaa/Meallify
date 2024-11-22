@@ -1,0 +1,50 @@
+body:has(#mode:checked) body {
+    background-color: #202020;
+}
+
+:root:has(#mood:checked) body {
+    background-color: #202020 ;
+}
+
+body:has(#mood:checked) .fa-gear {
+    display: block;
+}
+
+body:has(#mood:checked) .fa-moon {
+    display: none;
+}
+
+:root:has(#mood:checked) {
+    --color-primary: hsl( 35, 72%, 44% );
+    --primary-hue: 35;
+    --primary-lightness: 44%;
+    --primary-saturation: 72%;
+    --hover-bg-color : hsl( 219, 51%, 89% );
+    --light-hue: 0;
+    --light-saturation: 0%;
+    --light-lightness: 9%;
+    --color-default: #fff;
+    --color-secondary: #fff;
+    --color-tertiary: #9f9f9f;
+  --color-light-grey: #252525;
+    --color-light: hsl( 0, 0%, 9% );
+}
+
+.heading p span {
+    color: var(--color-primary);
+}
+
+body:not(:has(#home:target):has(#mood:checked) .home-link),
+body:has(#home:target):has(#mood:checked) .home-link,
+body:has(#contact:target):has(#mood:checked) .contact-link,
+body:has(#gallery:target):has(#mood:checked) .gallery-link,
+body:has(#chefs:target):has(#mood:checked) .chefs-link{
+   color: var(--color-default) ;
+}
+
+body:has(#home:target):has(#mood:checked) .home-link::after,
+body:has(#contact:target):has(#mood:checked) .contact-link::after,
+body:has(#gallery:target):has(#mood:checked) .gallery-link::after,
+body:has(#chefs:target):has(#mood:checked) .chefs-link::after{
+   width: 100%;
+}
